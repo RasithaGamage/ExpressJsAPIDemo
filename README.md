@@ -32,6 +32,27 @@ TestExpressApi/
 - Node.js (v18+ recommended)
 - npm
 
+### Database Setup
+
+Create the required MySQL table by running the following SQL script:
+
+```sql
+
+CREATE TABLE `<your_db_name>`.`users` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `username` VARCHAR(100) NULL,
+   `email` VARCHAR(100) NULL,
+   `password` VARCHAR(100) NULL,
+   `createdAt` DATETIME NOT NULL,
+   `updatedAt` DATETIME NULL,
+   PRIMARY KEY (`id`)
+);
+
+
+```
+
+Make sure your MySQL server is running and the database `express_test` exists before running the script.
+
 ### Installation
 1. Clone the repository:
    ```sh
