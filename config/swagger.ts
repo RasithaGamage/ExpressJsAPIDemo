@@ -13,6 +13,16 @@ const options = {
         url: 'http://localhost:3000',
       },
     ],
+    tags: [
+      {
+        name: 'users',
+        description: 'User management'
+      },
+      {
+        name: 'login',
+        description: 'Authentication'
+      }
+    ],
   },
   apis: ['./routes/*.ts'], // path to your route files
 };

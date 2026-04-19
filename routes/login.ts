@@ -7,6 +7,7 @@ const router = Router();
  * @swagger
  * /login:
  *   post:
+ *     tags: [login]
  *     summary: User login
  *     description: Authenticate user and return JWT token in cookie
  *     requestBody:

@@ -7,6 +7,7 @@ const router = Router();
  * @swagger
  * /users:
  *   get:
+ *     tags: [users]
  *     summary: Get user by ID
  *     description: Retrieve a user by their ID (provide id as query param)
  *     parameters:
@@ -28,6 +29,7 @@ router.get('/', getUserById);
  * @swagger
  * /users:
  *   post:
+ *     tags: [users]
  *     summary: Create a new user
  *     description: Create a new user with username, email, and password
  *     requestBody:
