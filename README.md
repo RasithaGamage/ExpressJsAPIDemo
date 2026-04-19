@@ -32,6 +32,27 @@ TestExpressApi/
 - Node.js (v18+ recommended)
 - npm
 
+
+### Environment Setup
+
+Before running the project, create a `.env` file in the project root with the following content:
+
+```
+
+# JWT secret key
+JWT_SECRET=your_jwt_secret
+
+# MySQL connection details
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_NAME=express_test
+
+```
+
+Replace the values as needed for your environment.
+
 ### Installation
 1. Clone the repository:
    ```sh
@@ -78,5 +99,3 @@ TestExpressApi/
 - All source files are written in TypeScript (`.ts`).
 - Type definitions for all major dependencies are included.
 
-## License
-MIT
