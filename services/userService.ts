@@ -1,3 +1,24 @@
+// Get all users
+export async function getAllUsers(): Promise<User[]> {
+    const [rows] = await db.query('SELECT * FROM users');
+    const users = rows as any[];
+    return users.map(u => new User(u.id.toString(), u.username, u.email, u.password, u.createdAt, u.updatedAt));
+}
+
+// Update user by ID
+export async function updateUserById(id: string, username: string, email: string): Promise<User | undefined> {
+    const [result] = await db.execute('UPDATE users SET username = ?, email = ?, updatedAt = NOW() WHERE id = ?', [username, email, id]);
+    if ((result as any).affectedRows > 0) {
+        return findUserById(id);
+    }
+    return undefined;
+}
+
+// Delete user by ID
+export async function deleteUserById(id: string): Promise<boolean> {
+    const [result] = await db.execute('DELETE FROM users WHERE id = ?', [id]);
+    return (result as any).affectedRows > 0;
+}
 // User service for business logic and data access
 import { User } from '../models/user';
 import db  from '../config/db';

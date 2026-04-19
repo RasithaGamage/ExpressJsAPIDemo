@@ -23,6 +23,20 @@ const options = {
         description: 'Authentication'
       }
     ],
+    components: {
+      schemas: {
+        User: {
+          type: 'object',
+          properties: {
+            id: { type: 'string', example: '1' },
+            username: { type: 'string', example: 'johndoe' },
+            email: { type: 'string', example: 'john@example.com' },
+            createdAt: { type: 'string', format: 'date-time', example: '2024-01-01T00:00:00.000Z' },
+            updatedAt: { type: 'string', format: 'date-time', example: '2024-01-01T00:00:00.000Z' }
+          }
+        }
+      }
+    },
   },
   apis: ['./routes/*.ts'], // path to your route files
 };
