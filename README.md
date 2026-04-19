@@ -17,10 +17,10 @@ TestExpressApi/
 ├── bin/www.ts            # Server entry point
 ├── config/               # Configuration files (db, swagger)
 ├── controllers/          # Route controllers
-├── models/               # Data models
+├── models/               # Data models / Business logic
 ├── public/               # Static files
 ├── routes/               # Express routers
-├── services/             # Business logic
+├── services/             # Database Operations/ Business logic
 ├── utils/                # Utility functions (e.g., JWT)
 ├── package.json          # NPM scripts and dependencies
 ├── tsconfig.json         # TypeScript configuration
@@ -32,10 +32,20 @@ TestExpressApi/
 - Node.js (v18+ recommended)
 - npm
 
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/RasithaGamage/ExpressJsAPIDemo.git
+   cd TestExpressApi
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
 ### Environment Setup
 
-Before running the project, create a `.env` file in the project root with the following content:
+Before running the project, create a `.env` file in the project root with the following content (check the `example.env` file. you can make copy of `example.env` and rename it to .`env`):
 
 ```
 
@@ -52,17 +62,6 @@ DB_NAME=express_test
 ```
 
 Replace the values as needed for your environment.
-
-### Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/RasithaGamage/ExpressJsAPIDemo.git
-   cd TestExpressApi
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
 
 ### Development
 - Start the server with TypeScript using ts-node:
